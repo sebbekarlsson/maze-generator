@@ -174,12 +174,12 @@ class Canvas(object):
 
             # intersection to the left or right
             if self.get_location_data(x - self.block_size, y) == StructType.INTERSECTION\
-                or self.get_location_data(x + self.block_size, y) == StructType.INTERSECTION:
-                self.struct_type = StructType.HORIZONTAL
+                    or self.get_location_data(x + self.block_size, y) == StructType.INTERSECTION:
+                    self.struct_type = StructType.HORIZONTAL
             # intersection above or below
             elif self.get_location_data(x, y - self.block_size) == StructType.INTERSECTION\
                 or self.get_location_data(x, y + self.block_size) == StructType.INTERSECTION:
-                self.struct_type = StructType.VERTICAL
+                    self.struct_type = StructType.VERTICAL
             else:
                 self.struct_type = self.get_new_struct_type()
 
